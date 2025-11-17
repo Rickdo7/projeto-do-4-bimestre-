@@ -1,13 +1,17 @@
 import { StatusBar } from 'expo-status-bar';
 import { StyleSheet, Text, View } from 'react-native';
-
+import fundo from "..assets/fundo.jpg"
 export default function App() {
   return (
     <View style={styles.container}>
+        
         <View style={styles.main}>
             <Text style={styles.titulo}>
                 Pagina inicial
             </Text>
+      <View>
+        <Image source={fundo}/>
+      </View>
             <Text style={styles.subtitulo}>essa é minha tela inicial do meu projeto</Text>
         </View>
       
@@ -19,7 +23,7 @@ export default function App() {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: '#fff',
+    backgroundColor: '#53ac59',
     alignItems: 'center',
     justifyContent: 'center',
     padding: 24,
@@ -35,7 +39,8 @@ main:{
     fontWeight:"bold"
   },
   subtitulo:{
-    fontSize:36
+    fontSize:18,
+    color:"#888"
   }
 
 });

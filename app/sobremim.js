@@ -31,11 +31,11 @@ main:{
     flex:1
   },
   titulo:{
-    fontSize:64,
+    fontSize:32,
     fontWeight:"bold"
   },
   subtitulo:{
-    fontSize:36
+    fontSize:18
   }
 
 });

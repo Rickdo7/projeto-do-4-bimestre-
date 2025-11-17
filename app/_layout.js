@@ -7,14 +7,14 @@ export default function Layout() {
         screenOptions={{
             headerShown: false,
             tabBarStyle: {
-                backgroundColor: "#999999", //cor fundo
+                backgroundColor: "#fff", //cor fundo
                 borderTopColor: "transparent", //remove borda superior
                 elevation: 10, //sombra
-                height: 50,//altura
+                height: 75,//altura
                 paddingBottom: 5,
             },
-            tabBarActiveTintColor: "white",
-            tabBarInactiveTintColor: "green"
+            tabBarActiveTintColor: "#0f68",
+            tabBarInactiveTintColor: "#0f684b"
         }}>
             <Tabs.Screen
              name="index" 
