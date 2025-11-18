@@ -7,7 +7,7 @@ export default function useBebasFont() {
   useEffect(() => {
     async function loadFont() {
       await Font.loadAsync({
-        Bebas: require('../useFont/BebasNeue.ttf'),
+        Bebas: require('../../assets/fonts/BebasNeue.ttf'),
       });
       setLoaded(true);
     }
