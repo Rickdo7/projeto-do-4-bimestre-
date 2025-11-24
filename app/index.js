@@ -9,7 +9,7 @@ export default function App() {
 
 
 return (
-    <SafeAreaView>
+    
   <View style={styles.container}>
     <View style={styles.fundo}>
 
@@ -22,17 +22,17 @@ return (
       <Text style={styles.titulo}>  </Text>
   
     </View>
-    <View sub>
+    
 
 
-    </View>
+    
     
     
     </View>
     </View>
     <StatusBar style="auto" />
     </View>
-    </SafeAreaView>
+    
 
 
 
@@ -44,7 +44,7 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     justifyContent: 'center',
     padding: 10,
-    
+    backgroundColor:"#6ecf42"
     
   },
   titulo: {
@@ -55,17 +55,17 @@ const styles = StyleSheet.create({
     
   },
   banner1: {
-    marginTop: 250,
+    marginTop: -150,
     display: "flex",
     flexDirection: "column",
     alignItems: "center",
    
   },
   imgb1: {
-    marginTop:370,
-    borderRadius:30,
-    height: 7 00,
-    width: 970,
+    marginTop:-190,
+    borderRadius:10,
+    height: 250,
+    width: 400,
   },
   main:{
     flexDirection:Platform.OS ==="web"? "row" :"column",
