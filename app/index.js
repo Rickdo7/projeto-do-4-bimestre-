@@ -1,7 +1,7 @@
 import { StatusBar } from 'expo-status-bar';
 import { Image, StyleSheet, Text, View, ImageBackground, Platform } from 'react-native';
 import banner1 from "../assets/banner1.png";
-
+import fundo from "../assets/fundo.jpg"
 import { SafeAreaView } from 'react-native-safe-area-context';
 
 
@@ -10,29 +10,35 @@ export default function App() {
 
 return (
     
-  <View style={styles.container}>
-    <View style={styles.fundo}>
+  <SafeAreaView style={{flex:1}}>
+<ImageBackground 
+source ={fundo} 
+style={styles.fundo} 
+resizeMode='cover'>
 
-    <View style={styles.banner1}>
-    <View style={styles.main}>
+    <View style={styles.container}>
+      <View style={styles.fundo}>
+      <View style={styles.banner1}>
+      <View style={styles.main}>
     
-      <Image source={banner1} style={styles.imgb1} />
+        <Image source={banner1} style={styles.imgb1} />
     
-      
-      <Text style={styles.titulo}>  </Text>
+    
+        <Text style={styles.titulo}>  </Text>
+    
+      </View>
+    
+    
+    
+    
+      </View>
+      </View>
+      <StatusBar style="auto" />
+      </View>
+</ImageBackground>
+  </SafeAreaView>
+    
   
-    </View>
-    
-
-
-    
-    
-    
-    </View>
-    </View>
-    <StatusBar style="auto" />
-    </View>
-    
 
 
 
@@ -44,7 +50,7 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     justifyContent: 'center',
     padding: 10,
-    backgroundColor:"#6ecf42"
+    // backgroundColor:"#6ecf42"
     
   },
   titulo: {
@@ -55,7 +61,7 @@ const styles = StyleSheet.create({
     
   },
   banner1: {
-    marginTop: -150,
+    marginTop:Platform.OS === "web" ? -250 : -150 ,
     display: "flex",
     flexDirection: "column",
     alignItems: "center",
@@ -76,6 +82,12 @@ const styles = StyleSheet.create({
     backgroundColor:"white",
     height:10,
   },
+  fundo:{
+    flex:1,
+    height:"100%",
+    width:"100%",
+    
+  }
  
   
   
