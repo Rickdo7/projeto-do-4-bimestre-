@@ -1,7 +1,8 @@
 import { StatusBar } from 'expo-status-bar';
 import { Image, StyleSheet, Text, View, ImageBackground, Platform } from 'react-native';
-import banner1 from "../assets/banner1.png";
-import fundo from "../assets/fundo.jpg"
+
+import banner1 from "../../assets/banner1.png";
+import fundo from "../../assets/fundo.jpg"
 import { SafeAreaView } from 'react-native-safe-area-context';
 
 
@@ -11,13 +12,9 @@ export default function App() {
 return (
     
   <SafeAreaView style={{flex:1}}>
-<ImageBackground 
-source ={fundo} 
-style={styles.fundo} 
-resizeMode='cover'>
 
     <View style={styles.container}>
-      <View style={styles.fundo}>
+      
       <View style={styles.banner1}>
       <View style={styles.main}>
     
@@ -34,8 +31,7 @@ resizeMode='cover'>
       </View>
       </View>
       <StatusBar style="auto" />
-      </View>
-</ImageBackground>
+      
   </SafeAreaView>
     
   
@@ -50,14 +46,15 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     justifyContent: 'center',
     padding: 10,
-    // backgroundColor:"#6ecf42"
+    backgroundColor:"#6ecf42"
     
   },
   titulo: {
     fontSize:Platform.OS ==="web"? 48 : 26,
     marginBottom:20,
     textTransform:"uppercase",
-    fontWeight:Platform.OS === "web"? "bold" :null
+    fontWeight:Platform.OS === "web"? "bold" :null,
+    fontFamily:"ArchivoBlack_400Regular", 
     
   },
   banner1: {

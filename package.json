@@ -9,6 +9,7 @@
     "web": "expo start --web"
   },
   "dependencies": {
+    "@expo-google-fonts/archivo-black": "^0.4.1",
     "@expo-google-fonts/inter": "^0.4.2",
     "expo": "~54.0.23",
     "expo-constants": "~18.0.10",

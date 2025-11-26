@@ -1,6 +1,6 @@
 import {Tabs} from 'expo-router';
 import FontAwesome from "@expo/vector-icons/FontAwesome";
-
+import AntDesign from '@expo/vector-icons/AntDesign';
 export default function Layout() {
     return (
         <Tabs
@@ -25,13 +25,13 @@ export default function Layout() {
              <Tabs.Screen
              name="pageone" 
              options={{ title: "Obrigatório", headerShown: false,
-                tabBarIcon: ({color}) => <FontAwesome name="tag" size={24} color={color} /> 
+                tabBarIcon: ({color}) => <FontAwesome name="soccer-ball-o" size={24} color="black" />
             }}
              />
              <Tabs.Screen
              name="pagetwo" 
              options={{ title: "Livre", headerShown: false,
-                tabBarIcon: ({color}) => <FontAwesome name="tags" size={24} color={color} /> 
+                tabBarIcon: ({color}) => <FontAwesome name="soccer-ball-o" size={24} color={color} /> 
             }}
             />
              <Tabs.Screen

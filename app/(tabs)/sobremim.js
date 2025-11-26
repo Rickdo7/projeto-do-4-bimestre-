@@ -1,7 +1,7 @@
 import { StatusBar } from 'expo-status-bar';
 import { StyleSheet, Text, View, Image, Platform, ImageBackground } from 'react-native';
 import { SafeAreaView } from 'react-native-safe-area-context';
-import ftperfil from "../assets/ftperfil.jpeg";
+import ftperfil from "../../assets/ftperfil.jpeg";
 export default function App() {
   return (
       
@@ -9,7 +9,7 @@ export default function App() {
 
     <View style={styles.container}>
       
-       <Text style={styles.titulo}> Olá </Text>
+       <Text style={styles.titulo}> Sobre Mim </Text>
 <View style={styles.main}>
 
        <View>
@@ -61,7 +61,7 @@ export default function App() {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor:"#6ecf42",
+    backgroundColor:"#00755c",
     alignItems: 'center',
     // justifyContent: 'center',   
     padding:20
