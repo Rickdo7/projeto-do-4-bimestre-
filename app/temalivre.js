@@ -1,6 +1,7 @@
 import { StatusBar } from 'expo-status-bar';
 import { StyleSheet, Text, View, ScrollView, Platform } from 'react-native';
 import { SafeAreaView } from 'react-native-safe-area-context';
+import { MaterialIcons, FontAwesome5, Ionicons, Entypo, FontAwesome, MaterialCommunityIcons } from '@expo/vector-icons';
 
 export default function SobreFutebol() {
   return (
@@ -10,84 +11,121 @@ export default function SobreFutebol() {
 
           <Text style={styles.titulo}>Sobre o Futebol</Text>
 
-          {/* Seção: História */}
+          {/* História */}
           <View style={styles.card}>
-            <Text style={styles.sectionTitle}>📜 História do Futebol</Text>
+            <View style={styles.iconRow}>
+              <MaterialIcons name="history-edu" size={26} color="#aaffc4" />
+              <Text style={styles.sectionTitle}>História do Futebol</Text>
+            </View>
 
             <Text style={styles.paragraph}>
-              O futebol moderno surgiu na Inglaterra durante o século XIX, quando as escolas e 
-              universidades começaram a padronizar regras para um esporte que já era praticado 
-              de várias formas ao redor do mundo. Em 1863, foi fundada a Football Association (FA), 
-              marcando o nascimento oficial do futebol como conhecemos hoje.
+              O futebol moderno começou a ganhar forma na Inglaterra durante o século XIX, quando escolas e universidades passaram a organizar e padronizar regras para um jogo que já era praticado há séculos em diferentes culturas ao redor do mundo.
             </Text>
 
             <Text style={styles.paragraph}>
-              Com o tempo, o esporte se espalhou rapidamente pela Europa, América do Sul e pelo 
-              restante do planeta, tornando-se a modalidade mais popular do mundo. Em 1904, foi 
-              criada a FIFA, entidade responsável por organizar competições internacionais e 
-              promover o desenvolvimento do esporte.
+              Esse processo de oficialização culminou em 1863, com a fundação da Football Association (FA), a primeira entidade responsável por unificar as normas que definiriam o esporte como conhecemos hoje. A partir daí, o futebol se desenvolveu rapidamente, tornando-se um dos principais passatempos britânicos.
             </Text>
 
             <Text style={styles.paragraph}>
-              A Copa do Mundo, iniciada em 1930, consolidou o futebol como um fenômeno global, 
-              unindo culturas, países e milhões de torcedores em uma paixão única.
+              Com sua popularidade crescente, o futebol ultrapassou as fronteiras do Reino Unido e se espalhou pela Europa e demais continentes, impulsionado por viajantes, marinheiros e intercâmbios culturais. No século XX, o esporte se consolidou globalmente.
+            </Text>
+
+            <Text style={styles.paragraph}>
+              Um marco fundamental dessa expansão foi a criação da Copa do Mundo, em 1930, organizada pela FIFA. O torneio se tornou o maior evento esportivo do planeta, reafirmando o futebol como um fenômeno cultural, social e econômico em escala mundial.
             </Text>
           </View>
 
-          {/* Seção: Como Funciona o Jogo */}
+          {/* Como funciona */}
           <View style={styles.card}>
-            <Text style={styles.sectionTitle}>⚽ Como Funciona o Esporte</Text>
+            <View style={styles.iconRow}>
+              <FontAwesome5 name="futbol" size={24} color="#aaffc4" />
+              <Text style={styles.sectionTitle}>Como Funciona o Esporte</Text>
+            </View>
 
             <Text style={styles.paragraph}>
-              O futebol é praticado por duas equipes de 11 jogadores. O objetivo é simples: marcar 
-              mais gols que o adversário. O jogo é dividido em duas partes de 45 minutos cada, com 
-              intervalo de 15 minutos.
+              O futebol é praticado por duas equipes de 11 jogadores, que disputam a posse da bola para marcar gols no campo adversário.
             </Text>
-
             <Text style={styles.paragraph}>
-              O esporte exige habilidades como passe, condução, finalização, marcação e estratégia. 
-              Cada jogador possui uma função em campo, seja na defesa, no meio-campo ou no ataque.
+              O esporte exige habilidades como passe, condução, marcação e estratégia coletiva.
             </Text>
           </View>
 
-          {/* Seção: Posições */}
+          {/* Posições */}
           <View style={styles.card}>
-            <Text style={styles.sectionTitle}>📌 Posições dos Jogadores</Text>
+            <View style={styles.iconRow}>
+              <Entypo name="location-pin" size={26} color="#aaffc4" />
+              <Text style={styles.sectionTitle}>Posições dos Jogadores</Text>
+            </View>
 
             <Text style={styles.listItem}>• Goleiro — responsável por defender o gol.</Text>
             <Text style={styles.listItem}>• Zagueiros — protegem a área defensiva.</Text>
-            <Text style={styles.listItem}>• Laterais — atuam pelas extremidades do campo.</Text>
-            <Text style={styles.listItem}>• Volantes — auxiliam na defesa e distribuem o jogo.</Text>
-            <Text style={styles.listItem}>• Meias — criam jogadas e articulam o ataque.</Text>
-            <Text style={styles.listItem}>• Atacantes — têm como principal função marcar gols.</Text>
+            <Text style={styles.listItem}>• Laterais — jogam pelas extremidades do campo.</Text>
+            <Text style={styles.listItem}>• Volantes — auxiliam na defesa e na distribuição.</Text>
+            <Text style={styles.listItem}>• Meias — criam jogadas.</Text>
+            <Text style={styles.listItem}>• Atacantes — responsáveis pelos gols.</Text>
           </View>
 
-          {/* Seção: Regras Básicas */}
+          {/* Regras */}
           <View style={styles.card}>
-            <Text style={styles.sectionTitle}>📘 Regras Básicas</Text>
+            <View style={styles.iconRow}>
+              <Ionicons name="book" size={26} color="#aaffc4" />
+              <Text style={styles.sectionTitle}>Regras Básicas</Text>
+            </View>
 
-            <Text style={styles.listItem}>• O uso das mãos é proibido para jogadores de linha.</Text>
-            <Text style={styles.listItem}>• Faltas ocorrem quando há contato ou conduta irregular.</Text>
-            <Text style={styles.listItem}>• Cartão amarelo — advertência.</Text>
-            <Text style={styles.listItem}>• Cartão vermelho — expulsão do jogador.</Text>
-            <Text style={styles.listItem}>• Ganha o jogo quem marcar mais gols.</Text>
+            <Text style={styles.listItem}>• Uso das mãos é proibido (exceto goleiro).</Text>
+            <Text style={styles.listItem}>• Faltas acontecem por contato irregular.</Text>
+            <Text style={styles.listItem}>• Cartão amarelo = advertência.</Text>
+            <Text style={styles.listItem}>• Cartão vermelho = expulsão.</Text>
           </View>
 
-          {/* Seção: Estrutura e Campeonatos */}
+          {/* Estrutura Mundial */}
           <View style={styles.card}>
-            <Text style={styles.sectionTitle}>🌍 Estrutura do Futebol Mundial</Text>
+            <View style={styles.iconRow}>
+              <FontAwesome name="globe" size={26} color="#aaffc4" />
+              <Text style={styles.sectionTitle}>Estrutura do Futebol Mundial</Text>
+            </View>
 
             <Text style={styles.paragraph}>
-              O futebol é organizado por confederações continentais, como a UEFA (Europa) e a 
-              CONMEBOL (América do Sul). Cada país possui sua federação nacional, responsável por 
-              campeonatos locais e formação de seleções.
+              Federações nacionais organizam campeonatos internos, enquanto confederações continentais administram torneios regionais — tudo supervisionado pela FIFA.
             </Text>
+          </View>
+
+          {/* Estatísticas */}
+          <View style={styles.card}>
+            <View style={styles.iconRow}>
+              <MaterialCommunityIcons name="chart-line" size={26} color="#aaffc4" />
+              <Text style={styles.sectionTitle}>Estatísticas no Futebol</Text>
+            </View>
+
+            <Text style={styles.listItem}>• Posse de bola.</Text>
+            <Text style={styles.listItem}>• Finalizações.</Text>
+            <Text style={styles.listItem}>• Precisão de passes.</Text>
+            <Text style={styles.listItem}>• Gols esperados (xG).</Text>
+          </View>
+
+          {/* Evolução */}
+          <View style={styles.card}>
+            <View style={styles.iconRow}>
+              <MaterialCommunityIcons name="timeline-clock" size={26} color="#aaffc4" />
+              <Text style={styles.sectionTitle}>Evolução do Futebol</Text>
+            </View>
 
             <Text style={styles.paragraph}>
-              As principais competições do mundo incluem a Copa do Mundo, Champions League, 
-              Libertadores, Eurocopa e Copa América. Esses torneios reúnem as melhores equipes 
-              e atletas do planeta.
+              O futebol evoluiu taticamente, fisicamente e tecnicamente, acompanhando inovações tecnológicas e mudanças nas regras ao longo das décadas.
             </Text>
+          </View>
+
+          {/* Iniciantes */}
+          <View style={styles.card}>
+            <View style={styles.iconRow}>
+              <FontAwesome5 name="book-reader" size={24} color="#aaffc4" />
+              <Text style={styles.sectionTitle}>Conteúdo Educativo para Iniciantes</Text>
+            </View>
+
+            <Text style={styles.listItem}>• Aprenda fundamentos básicos.</Text>
+            <Text style={styles.listItem}>• Observe jogos com atenção.</Text>
+            <Text style={styles.listItem}>• Pratique sempre.</Text>
+            <Text style={styles.listItem}>• Teste posições diferentes.</Text>
           </View>
 
           <StatusBar style="light" />
@@ -125,11 +163,17 @@ const styles = StyleSheet.create({
     marginBottom: 25,
   },
 
+  iconRow: {
+    flexDirection: "row",
+    alignItems: "center",
+    marginBottom: 10,
+    gap: 10,
+  },
+
   sectionTitle: {
     fontSize: 22,
     color: "#aaffc4",
     fontWeight: "bold",
-    marginBottom: 10,
   },
 
   paragraph: {
