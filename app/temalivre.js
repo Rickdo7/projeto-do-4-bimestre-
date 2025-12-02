@@ -4,9 +4,10 @@ import { SafeAreaView } from 'react-native-safe-area-context';
 import { MaterialIcons, FontAwesome5, Ionicons, Entypo, FontAwesome, MaterialCommunityIcons } from '@expo/vector-icons';
 import hts from "../assets/hts.jpg";
 import funciona from "../assets/funciona.jpg";
-import posicao from "../assets/dsa.jpg";
+import posicao from "../assets/posicao.png";
 import fifa from "../assets/fifa.jpg";
 import estatica from "../assets/messi.jpg";
+import evolucao from "../assets/evolucao.png"
 export default function SobreFutebol() {
   return (
     <SafeAreaView style={{ flex: 1 }}>
@@ -115,13 +116,14 @@ export default function SobreFutebol() {
             <Text style={styles.listItem}>• Gols esperados (xG).</Text>
           </View>
 
+<Image source={evolucao} style={styles.evolucao}/>
           {/* Evolução */}
           <View style={styles.card}>
             <View style={styles.iconRow}>
               <MaterialCommunityIcons name="timeline-clock" size={26} color="#aaffc4" />
               <Text style={styles.sectionTitle}>Evolução do Futebol</Text>
             </View>
-
+       
             <Text style={styles.paragraph}>
               O futebol evoluiu taticamente, fisicamente e tecnicamente, acompanhando inovações tecnológicas e mudanças nas regras ao longo das décadas.
             </Text>
@@ -201,8 +203,8 @@ const styles = StyleSheet.create({
     marginBottom: 8,
   },
   historia: {
-    width: "100%",
-    height: 220,
+    width: 400,
+    height: 230,
     borderRadius: 16,
     marginBottom: 20,
     resizeMode: "cover",
@@ -216,7 +218,7 @@ const styles = StyleSheet.create({
   },
 
   funciona: {
-    width: "100%",
+    width: 400,
     height: 250,
     borderRadius: 16,
     marginVertical: 20,
@@ -232,7 +234,7 @@ const styles = StyleSheet.create({
 
   posicao: {
     width: 350,
-    height: 430,
+    height: 520,
     borderRadius: 16,
     marginVertical: 20,
     resizeMode: "cover",
@@ -274,5 +276,19 @@ const styles = StyleSheet.create({
     shadowOffset: { width: 0, height: 3 },
     elevation: 8,
   },
+  evolucao:{
+    width: "100%",
+    height: 260,
+    borderRadius: 16,
+    marginBottom: 20,
+    resizeMode: "cover",
+    borderWidth: 2,
+    borderColor: "#aaffc4",
+    shadowColor: "#000",
+    shadowOpacity: 0.25,
+    shadowRadius: 8,
+    shadowOffset: { width: 0, height: 3 },
+    elevation: 8,
+  }
 
 });
