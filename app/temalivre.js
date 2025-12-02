@@ -1,8 +1,12 @@
 import { StatusBar } from 'expo-status-bar';
-import { StyleSheet, Text, View, ScrollView, Platform } from 'react-native';
+import { StyleSheet, Text, View, ScrollView, Platform, Image} from 'react-native';
 import { SafeAreaView } from 'react-native-safe-area-context';
 import { MaterialIcons, FontAwesome5, Ionicons, Entypo, FontAwesome, MaterialCommunityIcons } from '@expo/vector-icons';
-
+import hts from "../assets/hts.jpg";
+import funciona from "../assets/funciona.jpg";
+import posicao from "../assets/dsa.jpg";
+import fifa from "../assets/fifa.jpg";
+import estatica from "../assets/messi.jpg";
 export default function SobreFutebol() {
   return (
     <SafeAreaView style={{ flex: 1 }}>
@@ -12,6 +16,10 @@ export default function SobreFutebol() {
           <Text style={styles.titulo}>Sobre o Futebol</Text>
 
           {/* História */}
+          <Image 
+          source={hts}
+          style={styles.historia}
+          />
           <View style={styles.card}>
             <View style={styles.iconRow}>
               <MaterialIcons name="history-edu" size={26} color="#aaffc4" />
@@ -34,6 +42,8 @@ export default function SobreFutebol() {
               Um marco fundamental dessa expansão foi a criação da Copa do Mundo, em 1930, organizada pela FIFA. O torneio se tornou o maior evento esportivo do planeta, reafirmando o futebol como um fenômeno cultural, social e econômico em escala mundial.
             </Text>
           </View>
+          <Image
+          source={funciona} style={styles.funciona}/>
 
           {/* Como funciona */}
           <View style={styles.card}>
@@ -50,6 +60,7 @@ export default function SobreFutebol() {
             </Text>
           </View>
 
+<Image source={posicao} style={styles.posicao}/>
           {/* Posições */}
           <View style={styles.card}>
             <View style={styles.iconRow}>
@@ -78,18 +89,19 @@ export default function SobreFutebol() {
             <Text style={styles.listItem}>• Cartão vermelho = expulsão.</Text>
           </View>
 
+        <Image source={fifa} style={styles.fifa}/>
           {/* Estrutura Mundial */}
           <View style={styles.card}>
             <View style={styles.iconRow}>
               <FontAwesome name="globe" size={26} color="#aaffc4" />
               <Text style={styles.sectionTitle}>Estrutura do Futebol Mundial</Text>
             </View>
-
             <Text style={styles.paragraph}>
               Federações nacionais organizam campeonatos internos, enquanto confederações continentais administram torneios regionais — tudo supervisionado pela FIFA.
             </Text>
           </View>
 
+<Image source={estatica} style={styles.estatica}/>
           {/* Estatísticas */}
           <View style={styles.card}>
             <View style={styles.iconRow}>
@@ -188,4 +200,79 @@ const styles = StyleSheet.create({
     fontSize: 16,
     marginBottom: 8,
   },
+  historia: {
+    width: "100%",
+    height: 220,
+    borderRadius: 16,
+    marginBottom: 20,
+    resizeMode: "cover",
+    borderWidth: 2,
+    borderColor: "#aaffc4",
+    shadowColor: "#000",
+    shadowOpacity: 0.25,
+    shadowRadius: 8,
+    shadowOffset: { width: 0, height: 3 },
+    elevation: 8,
+  },
+
+  funciona: {
+    width: "100%",
+    height: 250,
+    borderRadius: 16,
+    marginVertical: 20,
+    resizeMode: "cover",
+    borderWidth: 2,
+    borderColor: "#80ffd9",
+    shadowColor: "#000",
+    shadowOpacity: 0.25,
+    shadowRadius: 8,
+    shadowOffset: { width: 0, height: 3 },
+    elevation: 8,
+  },
+
+  posicao: {
+    width: 350,
+    height: 430,
+    borderRadius: 16,
+    marginVertical: 20,
+    resizeMode: "cover",
+    borderWidth: 2,
+    borderColor: "#9dffb3",
+    shadowColor: "#000",
+    shadowOpacity: 0.25,
+    shadowRadius: 8,
+    shadowOffset: { width: 0, height: 3 },
+    elevation: 8,
+  },
+
+  fifa: {
+    width: 250,
+    height: 220,
+    borderRadius: 16,
+    marginVertical: 20,
+    resizeMode: "cover",
+    borderWidth: 2,
+    borderColor: "#b3ffe0",
+    shadowColor: "#000",
+    shadowOpacity: 0.25,
+    shadowRadius: 8,
+    shadowOffset: { width: 0, height: 3 },
+    elevation: 8,
+  },
+
+  estatica: {
+    width: 350,
+    height: 430,
+    borderRadius: 16,
+    marginVertical: 20,
+    resizeMode: "cover",
+    borderWidth: 2,
+    borderColor: "#ccffdd",
+    shadowColor: "#000",
+    shadowOpacity: 0.25,
+    shadowRadius: 8,
+    shadowOffset: { width: 0, height: 3 },
+    elevation: 8,
+  },
+
 });

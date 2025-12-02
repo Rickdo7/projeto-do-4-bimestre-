@@ -47,6 +47,20 @@ export default function TabLayout() {
                     ),
                 }}
             />
+            {/* LIVRE */}
+            <Tabs.Screen
+                name="temalivre"
+                options={{
+                    title: "Livre",
+                    tabBarIcon: ({ color, focused }) => (
+                        <FontAwesome
+                            name="soccer-ball-o"
+                            size={focused ? 30 : 26}
+                            color={color}
+                        />
+                    ),
+                }}
+            />
 
             {/* OBRIGATÓRIO */}
             <Tabs.Screen
@@ -63,20 +77,6 @@ export default function TabLayout() {
                 }}
             />
 
-            {/* LIVRE */}
-            <Tabs.Screen
-                name="temalivre"
-                options={{
-                    title: "Livre",
-                    tabBarIcon: ({ color, focused }) => (
-                        <FontAwesome
-                            name="soccer-ball-o"
-                            size={focused ? 30 : 26}
-                            color={color}
-                        />
-                    ),
-                }}
-            />
 
             {/* SOBRE */}
             <Tabs.Screen
